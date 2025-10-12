@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation Demo - Double G Pools</title>
+    <meta name="description" content="Experience seamless navigation throughout Double G Pools' single-page application with smooth-scroll section jumping and active state highlighting." />
+    <meta name="keywords" content="pool construction navigation, smooth scroll, Lancaster pools, premium pool contractor" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Navigation Demo - Double G Pools" />
+    <meta property="og:description" content="Seamless navigation experience for premium pool construction services." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://doublegpools.com/sticky-navigation" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fdoublegp4159back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+<script type="module" src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+</head>
+<body class="font-poppins">
+    <!-- Sticky Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-surface-200 transition-all duration-300" id="navbar" role="banner">
+        <nav class="container-custom py-4" role="navigation" aria-label="Main navigation">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-600 rounded-xl flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-text-primary">Double G Pools</h1>
+                        <p class="text-xs text-text-secondary">Licensed • Insured • Bonded</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#hero" class="nav-link text-primary font-semibold transition-colors duration-200" data-section="hero" aria-current="page">Home</a>
+                    <a href="#about" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200" data-section="about">About</a>
+                    <a href="#services" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200" data-section="services">Services</a>
+                    <a href="#gallery" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200" data-section="gallery">Gallery</a>
+                    <a href="#contact" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200" data-section="contact">Contact</a>
+                    <a href="tel:661-390-5122" class="btn-primary">Call Now</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2 text-text-primary hover:text-primary transition-colors duration-200" id="mobile-menu-button" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <svg class="w-6 h-6 transition-transform duration-200" id="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" class="menu-open"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" class="menu-close hidden"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div class="md:hidden mt-4 pb-4 border-t border-surface-200 hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 pt-4">
+                    <a href="#hero" class="nav-link text-primary font-semibold transition-colors duration-200" data-section="hero" aria-current="page">Home</a>
+                    <a href="#about" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200" data-section="about">About</a>
+                    <a href="#services" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200" data-section="services">Services</a>
+                    <a href="#gallery" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200" data-section="gallery">Gallery</a>
+                    <a href="#contact" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200" data-section="contact">Contact</a>
+                    <a href="tel:661-390-5122" class="btn-primary inline-block text-center">Call Now</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center overflow-hidden" id="hero" role="banner">
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Luxury swimming pool with crystal clear water and modern design" class="w-full h-full object-cover" loading="eager" onerror="this.src='https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=2940&h=1960&dpr=2'; this.onerror=null;" />
+                <div class="hero-overlay"></div>
+            </div>
+
+            <!-- Hero Content -->
+            <div class="relative z-20 container-custom">
+                <div class="text-center text-white space-y-8 fade-in">
+                    <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
+                        <svg class="w-5 h-5 text-accent-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="text-sm font-medium">Navigation Demo - Smooth Scroll Experience</span>
+                    </div>
+
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                        Seamless Navigation
+                        <span class="block text-accent-300">Experience</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-3xl mx-auto">
+                        Discover how our sticky navigation with active state highlighting creates an intuitive browsing experience across all sections.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                        <a href="#about" class="bg-accent-400 hover:bg-accent-500 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-elevated hover:shadow-card">
+                            Explore Sections
+                        </a>
+                        <a href="hero_section.html" class="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 backdrop-blur-sm">
+                            View Full Site
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+                <div class="flex flex-col items-center space-y-2 text-white/70 hover:text-white transition-colors duration-300">
+                    <span class="text-sm font-medium">Scroll to Navigate</span>
+                    <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+                        <div class="w-1 h-3 bg-white/50 rounded-full mt-2 animate-bounce"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section-padding bg-surface" id="about">
+            <div class="container-custom">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-4xl md:text-5xl font-bold text-text-primary mb-6">About Double G Pools</h2>
+                    <p class="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+                        Where technical mastery meets aesthetic excellence in premium pool construction.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <!-- Content -->
+                    <div class="space-y-8 fade-in">
+                        <div class="space-y-6">
+                            <h3 class="text-3xl font-semibold text-text-primary">Licensed, Insured & Bonded</h3>
+                            <p class="text-lg text-text-secondary leading-relaxed">
+                                With over 15 years of experience and CSB#1140721 licensing, we bring unmatched expertise to every project. Our commitment to excellence has resulted in over 500 completed pools and a 100% satisfaction rate.
+                            </p>
+                        </div>
+
+                        <!-- Trust Badges -->
+                        <div class="grid sm:grid-cols-3 gap-6">
+                            <div class="text-center p-6 bg-white rounded-xl shadow-subtle">
+                                <div class="text-3xl font-bold text-primary mb-2">15+</div>
+                                <div class="text-text-secondary">Years Experience</div>
+                            </div>
+                            <div class="text-center p-6 bg-white rounded-xl shadow-subtle">
+                                <div class="text-3xl font-bold text-primary mb-2">500+</div>
+                                <div class="text-text-secondary">Pools Completed</div>
+                            </div>
+                            <div class="text-center p-6 bg-white rounded-xl shadow-subtle">
+                                <div class="text-3xl font-bold text-primary mb-2">100%</div>
+                                <div class="text-text-secondary">Satisfaction Rate</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Image -->
+                    <div class="relative fade-in animation-delay-300">
+                        <div class="aspect-w-4 aspect-h-3 rounded-2xl overflow-hidden shadow-elevated">
+                            <img src="https://images.pixabay.com/photos/2017/07/09/03/19/home-2486092_1280.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Professional pool construction team at work" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section-padding bg-white" id="services">
+            <div class="container-custom">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-4xl md:text-5xl font-bold text-text-primary mb-6">Our Services</h2>
+                    <p class="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+                        Comprehensive pool construction and maintenance services tailored to your vision.
+                    </p>
+                </div>
+
+                <!-- Services Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="card-elevated fade-in transform hover:scale-105 transition-all duration-300">
+                        <div class="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-text-primary mb-4">Custom Pool Design</h3>
+                        <p class="text-text-secondary leading-relaxed">
+                            Collaborative design process that brings your unique vision to life with expert guidance and innovative solutions.
+                        </p>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="card-elevated fade-in animation-delay-200 transform hover:scale-105 transition-all duration-300">
+                        <div class="w-16 h-16 bg-secondary-100 rounded-xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-text-primary mb-4">Pool Construction</h3>
+                        <p class="text-text-secondary leading-relaxed">
+                            Premium craftsmanship with every pool engineered to exceed industry standards for lasting beauty and performance.
+                        </p>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="card-elevated fade-in animation-delay-400 transform hover:scale-105 transition-all duration-300">
+                        <div class="w-16 h-16 bg-accent-100 rounded-xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-text-primary mb-4">Maintenance Services</h3>
+                        <p class="text-text-secondary leading-relaxed">
+                            Comprehensive maintenance programs to keep your pool in perfect condition year-round with professional care.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="section-padding bg-surface" id="gallery">
+            <div class="container-custom">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-4xl md:text-5xl font-bold text-text-primary mb-6">Our Portfolio</h2>
+                    <p class="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+                        Discover the artistry and precision in every project we complete.
+                    </p>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Gallery Item 1 -->
+                    <div class="relative group overflow-hidden rounded-2xl shadow-card hover:shadow-elevated transition-all duration-300 fade-in">
+                        <div class="aspect-w-4 aspect-h-3">
+                            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Modern infinity pool with stunning landscape views" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-6 text-white">
+                                <h3 class="text-xl font-semibold mb-2">Infinity Pool Design</h3>
+                                <p class="text-sm opacity-90">Modern luxury with breathtaking views</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 2 -->
+                    <div class="relative group overflow-hidden rounded-2xl shadow-card hover:shadow-elevated transition-all duration-300 fade-in animation-delay-200">
+                        <div class="aspect-w-4 aspect-h-3">
+                            <img src="https://images.pixabay.com/photos/2016/11/29/03/53/swimming-pool-1867283_1280.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Resort-style pool with tropical landscaping" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-6 text-white">
+                                <h3 class="text-xl font-semibold mb-2">Resort-Style Pool</h3>
+                                <p class="text-sm opacity-90">Tropical paradise in your backyard</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 3 -->
+                    <div class="relative group overflow-hidden rounded-2xl shadow-card hover:shadow-elevated transition-all duration-300 fade-in animation-delay-400">
+                        <div class="aspect-w-4 aspect-h-3">
+                            <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Contemporary pool with geometric design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-6 text-white">
+                                <h3 class="text-xl font-semibold mb-2">Contemporary Design</h3>
+                                <p class="text-sm opacity-90">Clean lines and modern aesthetics</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section-padding bg-white" id="contact">
+            <div class="container-custom">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-4xl md:text-5xl font-bold text-text-primary mb-6">Get In Touch</h2>
+                    <p class="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+                        Ready to transform your outdoor space? Contact us for a free consultation.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-16">
+                    <!-- Contact Information -->
+                    <div class="space-y-8 fade-in">
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-text-primary mb-2">Phone</h3>
+                                    <a href="tel:661-390-5122" class="text-text-secondary hover:text-primary transition-colors duration-200">(661) 390-5122</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-text-primary mb-2">Service Area</h3>
+                                    <p class="text-text-secondary">Lancaster, CA & Surrounding Areas</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-text-primary mb-2">License</h3>
+                                    <p class="text-text-secondary">CSB#1140721 • Licensed, Insured & Bonded</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row gap-4 pt-6">
+                            <a href="tel:661-390-5122" class="btn-primary text-center">Call Now</a>
+                            <a href="contact_section.html" class="btn-outline text-center">View Contact Form</a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Contact Form -->
+                    <div class="bg-surface rounded-2xl p-8 fade-in animation-delay-300">
+                        <h3 class="text-2xl font-semibold text-text-primary mb-6">Quick Contact</h3>
+                        <form class="space-y-6" action="javascript:void(0)" method="post">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-text-primary mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="Your full name" required />
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-text-primary mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="your.email@example.com" required />
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-text-primary mb-2">Message</label>
+                                <textarea id="message" name="message" class="form-textarea" placeholder="Tell us about your pool project..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary w-full">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white section-padding" id="footer">
+        <div class="container-custom">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-600 rounded-xl flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Double G Pools</h3>
+                            <p class="text-sm text-text-light">Licensed • Insured • Bonded</p>
+                        </div>
+                    </div>
+                    <p class="text-text-light leading-relaxed mb-6 max-w-md">
+                        Transforming outdoor spaces into personal sanctuaries through meticulous craftsmanship and innovative design.
+                    </p>
+                    <div class="text-sm text-text-light">
+                        <p>CSB#1140721</p>
+                        <p>Licensed, Insured & Bonded</p>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="hero_section.html" class="text-text-light hover:text-white transition-colors duration-200">Home</a></li>
+                        <li><a href="about_section.html" class="text-text-light hover:text-white transition-colors duration-200">About</a></li>
+                        <li><a href="services_section.html" class="text-text-light hover:text-white transition-colors duration-200">Services</a></li>
+                        <li><a href="contact_section.html" class="text-text-light hover:text-white transition-colors duration-200">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact</h4>
+                    <div class="space-y-3 text-text-light">
+                        <p>Lancaster, CA</p>
+                        <a href="tel:661-390-5122" class="hover:text-white transition-colors duration-200">(661) 390-5122</a>
+                        <p>Available 7 Days a Week</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-text-light/20 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-text-light text-sm">© 2025 Double G Pools. All Rights Reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="javascript:void(0)" class="text-text-light hover:text-white transition-colors duration-200 text-sm">Privacy Policy</a>
+                    <a href="javascript:void(0)" class="text-text-light hover:text-white transition-colors duration-200 text-sm">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Navigation and Interactivity -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+            
+            // Toggle menu icon
+            const menuOpen = menuIcon.querySelector('.menu-open');
+            const menuClose = menuIcon.querySelector('.menu-close');
+            menuOpen.classList.toggle('hidden');
+            menuClose.classList.toggle('hidden');
+        });
+
+        // Navbar scroll effect with enhanced styling
+        const navbar = document.getElementById('navbar');
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            
+            if (currentScrollY > 100) {
+                navbar.classList.add('bg-white/98', 'shadow-subtle', 'backdrop-blur-md');
+                navbar.classList.remove('bg-white/95');
+            } else {
+                navbar.classList.add('bg-white/95');
+                navbar.classList.remove('bg-white/98', 'shadow-subtle', 'backdrop-blur-md');
+            }
+            
+            lastScrollY = currentScrollY;
+        });
+
+        // Intersection Observer for active navigation highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link[data-section]');
+        
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '-100px 0px -50% 0px'
+        };
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const sectionId = entry.target.id;
+                const navLink = document.querySelector(`[data-section="${sectionId}"]`);
+                
+                if (entry.isIntersecting && navLink) {
+                    // Remove active state from all nav links
+                    navLinks.forEach(link => {
+                        link.classList.remove('text-primary', 'font-semibold');
+                        link.classList.add('text-text-secondary');
+                        link.removeAttribute('aria-current');
+                    });
+                    
+                    // Add active state to current nav link
+                    navLink.classList.remove('text-text-secondary');
+                    navLink.classList.add('text-primary', 'font-semibold');
+                    navLink.setAttribute('aria-current', 'page');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        sections.forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const target = document.getElementById(targetId);
+                
+                if (target) {
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuButton.setAttribute('aria-expanded', 'false');
+                        const menuOpen = menuIcon.querySelector('.menu-open');
+                        const menuClose = menuIcon.querySelector('.menu-close');
+                        menuOpen.classList.remove('hidden');
+                        menuClose.classList.add('hidden');
+                    }
+                    
+                    // Calculate offset for sticky header
+                    const headerHeight = navbar.offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const fadeObserverOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, fadeObserverOptions);
+
+        // Observe fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submission handling
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simple form validation and feedback
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+            
+            if (name && email && message) {
+                // Show success message (in real implementation, this would submit to server)
+                alert('Thank you for your message! We will contact you soon.');
+                this.reset();
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        });
+
+        // Keyboard navigation support
+        document.addEventListener('keydown', function(e) {
+            // ESC key closes mobile menu
+            if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                mobileMenuButton.focus();
+            }
+        });
+
+        // Add loading animation
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+
+        // Parallax effect (with reduced motion respect)
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const heroImage = document.querySelector('#hero img');
+                if (heroImage) {
+                    heroImage.style.transform = `translateY(${scrolled * 0.3}px)`;
+                }
+            });
+        }
+    </script>
+
+    <style>
+        /* Additional custom styles for enhanced navigation experience */
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.8) 0%, rgba(59, 130, 246, 0.6) 50%, rgba(96, 165, 250, 0.4) 100%);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animation-delay-200 {
+            transition-delay: 200ms;
+        }
+
+        .animation-delay-300 {
+            transition-delay: 300ms;
+        }
+
+        .animation-delay-400 {
+            transition-delay: 400ms;
+        }
+
+        /* Enhanced navigation active states */
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link.text-primary::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: currentColor;
+            border-radius: 1px;
+            transform: scaleX(1);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-link:not(.text-primary)::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: currentColor;
+            border-radius: 1px;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            transform: scaleX(1);
+        }
+
+        /* Smooth loading transition */
+        body {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+
+        /* Enhanced mobile menu animation */
+        #mobile-menu {
+            transition: all 0.3s ease;
+            max-height: 0;
+            overflow: hidden;
+        }
+
+        #mobile-menu:not(.hidden) {
+            max-height: 400px;
+        }
+
+        /* Custom scrollbar for webkit browsers */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+
+        /* Focus styles for accessibility */
+        *:focus-visible {
+            outline: 2px solid #60a5fa;
+            outline-offset: 2px;
+        }
+
+        /* Reduced motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+            .fade-in,
+            .nav-link,
+            #mobile-menu {
+                transition: none;
+            }
+            
+            .animate-bounce {
+                animation: none;
+            }
+            
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        /* Enhanced hover effects for gallery */
+        .group:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Improved form focus states */
+        .form-input:focus,
+        .form-textarea:focus {
+            box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+            border-color: #60a5fa;
+        }
+
+        /* Navigation backdrop blur enhancement */
+        .backdrop-blur-md {
+            backdrop-filter: blur(12px);
+        }
+    </style>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
