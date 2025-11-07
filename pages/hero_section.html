@@ -12,7 +12,7 @@
     <meta property="og:description" content="Transform your outdoor space into a personal sanctuary with Double G Pools. Licensed, insured & bonded pool contractors." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://doublegpools.com" />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    <meta property="og:image" content="../public/hero-background.jpg" />
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -36,7 +36,7 @@
       },
       "openingHours": "Mo-Fr 08:00-18:00, Sa 09:00-16:00",
       "priceRange": "$$$",
-      "image": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "image": "../public/hero-background.jpg"
     }
     </script>
     
@@ -44,19 +44,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fdoublegp4159back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
-<script type="module" src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
-</head>
+  
+  <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fdoublegp4159back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.9"></script>
+  <script type="module" src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+  </head>
 <body class="font-poppins">
     <!-- Sticky Navigation Header -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-surface-200 transition-all duration-300" id="navbar">
         <nav class="container-custom py-4" role="navigation" aria-label="Main navigation">
             <div class="flex items-center justify-between">
-                <!-- Logo -->
+                <!-- Logo - Now easily replaceable -->
                 <div class="flex items-center space-x-3">
+                    <!-- Replace logo by updating the logo.svg file in /public/ folder -->
                     <div class="w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-600 rounded-xl flex items-center justify-center">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <img src="../public/logo.svg" alt="Double G Pools Logo" class="w-8 h-8 text-white" 
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="display: none;">
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                         </svg>
                     </div>
@@ -99,9 +102,14 @@
     <!-- Hero Section -->
     <main>
         <section class="relative min-h-screen flex items-center overflow-hidden" id="hero" role="banner">
-            <!-- Background Image with Overlay -->
+            <!-- Background Image with Overlay - Now easily replaceable -->
             <div class="absolute inset-0 z-0">
-                <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Luxury swimming pool with crystal clear water and modern design" class="w-full h-full object-cover" loading="eager" onerror="this.src='https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=2940&h=1960&dpr=2'; this.onerror=null;" />
+                <!-- Replace background by updating the hero-background.jpg file in /public/ folder -->
+                <img src="../public/hero-background.jpg" 
+                     alt="Luxury swimming pool with crystal clear water and modern design" 
+                     class="w-full h-full object-cover" 
+                     loading="eager" 
+                     onerror="this.src='https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
                 <div class="hero-overlay"></div>
             </div>
 
@@ -119,14 +127,6 @@
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <!-- Left Column - Main Content -->
                     <div class="text-white space-y-8 fade-in">
-                        <!-- Trust Badge -->
-                        <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
-                            <svg class="w-5 h-5 text-accent-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span class="text-sm font-medium">CSB#1140721 • Licensed, Insured & Bonded</span>
-                        </div>
-
                         <!-- Main Headline -->
                         <div class="space-y-4">
                             <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
@@ -184,12 +184,13 @@
 
                     <!-- Right Column - Feature Cards (Editorial Layout) -->
                     <div class="relative space-y-6 fade-in animation-delay-300">
-                        <!-- Offset Card 1 -->
+                        <!-- Offset Card 1 - Fixed Premium Craftsmanship Icon -->
                         <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-elevated transform rotate-1 hover:rotate-0 transition-transform duration-300">
                             <div class="flex items-start space-x-4">
                                 <div class="w-12 h-12 bg-primary-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <!-- Fixed icon - using a clean wrench/tools icon -->
                                     <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        <path fill-rule="evenodd" d="M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z" clip-rule="evenodd"/>
                                     </svg>
                                 </div>
                                 <div>
@@ -228,16 +229,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Scroll Indicator -->
-            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-                <div class="flex flex-col items-center space-y-2 text-white/70 hover:text-white transition-colors duration-300">
-                    <span class="text-sm font-medium">Explore Our Work</span>
-                    <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-                        <div class="w-1 h-3 bg-white/50 rounded-full mt-2 animate-bounce"></div>
                     </div>
                 </div>
             </div>
