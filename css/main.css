@@ -2524,6 +2524,15 @@ body{
     padding-right: 1.25rem;
   }
 
+  .section-padding{
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .contact-layout-grid{
+    gap: 1.25rem;
+  }
+
   .contact-layout-grid,
   .contact-footer-grid,
   #contact-forms .grid,
@@ -2536,6 +2545,35 @@ body{
   #contact-forms .grid > *,
   #services-grid .services-card-grid > *{
     width: 100%;
+  }
+
+  .contact-card,
+  .contact-form,
+  .contact-footer-card{
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .contact-hero-title{
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .contact-hero-subtitle{
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .contact-icon{
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .contact-icon svg,
+  svg.contact-icon{
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   #services-grid .services-card-grid > *{
