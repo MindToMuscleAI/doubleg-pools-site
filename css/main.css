@@ -2513,3 +2513,37 @@ button{
     line-height: 1;
   }
 }
+
+body{
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px){
+  .container-custom{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .contact-layout-grid,
+  .contact-footer-grid,
+  #contact-forms .grid,
+  #services-grid .services-card-grid{
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-layout-grid > *,
+  .contact-footer-grid > *,
+  #contact-forms .grid > *,
+  #services-grid .services-card-grid > *{
+    width: 100%;
+  }
+
+  #services-grid .services-card-grid > *{
+    max-width: 100%;
+  }
+
+  footer .container-custom{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
