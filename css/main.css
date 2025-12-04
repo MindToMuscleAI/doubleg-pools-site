@@ -2520,13 +2520,17 @@ body{
 
 @media (max-width: 768px){
   h1{
-    font-size: 1.875rem;
+    font-size: 1.75rem;
     line-height: 1.3;
   }
 
   h2{
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     line-height: 1.35;
+  }
+
+  body{
+    font-size: 0.95rem;
   }
 
   .container-custom{
@@ -2535,12 +2539,12 @@ body{
   }
 
   .section-padding{
-    padding-top: 1.75rem;
-    padding-bottom: 1.75rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
   .contact-layout-grid{
-    gap: 1.5rem;
+    gap: 1.25rem;
   }
 
   .contact-layout-grid,
@@ -2559,17 +2563,17 @@ body{
 
   .contact-card,
   .contact-footer-card{
-    padding: 1.25rem;
+    padding: 1.1rem;
   }
 
   .contact-hero-title{
-    font-size: 2rem;
+    font-size: 1.85rem;
     line-height: 1.2;
   }
 
   .contact-hero-subtitle{
-    font-size: 1.125rem;
-    line-height: 1.6;
+    font-size: 1.05rem;
+    line-height: 1.55;
   }
 
   .contact-icon{
@@ -2584,8 +2588,8 @@ body{
   }
 
   #contact-hero .container-custom{
-    padding-top: 2rem;
-    padding-bottom: 2.25rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.75rem;
   }
 
   .contact-hero-stack > :not([hidden]) ~ :not([hidden]){
@@ -2626,13 +2630,13 @@ body{
   }
 
   .services-hero-title{
-    font-size: 2rem;
+    font-size: 1.85rem;
     line-height: 1.25;
   }
 
   .services-hero-subtitle{
-    font-size: 1.125rem;
-    line-height: 1.6;
+    font-size: 1.05rem;
+    line-height: 1.55;
   }
 
   .services-section-header{
@@ -2640,14 +2644,14 @@ body{
   }
 
   .services-section-title{
-    font-size: 1.75rem;
+    font-size: 1.6rem;
     line-height: 1.3;
     margin-bottom: 1.25rem;
   }
 
   .services-section-desc{
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 0.95rem;
+    line-height: 1.55;
   }
 
   #services-grid .services-card-grid{
